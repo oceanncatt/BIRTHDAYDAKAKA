@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>19 anos da KaKa | Confirmação de Presença</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --rosa-claro: #fff4fa;
+      --rosa-fundo: #fde8f2;
+      --rosa-card: #fff9fc;
+      --rosa-medio: #eda4c6;
+      --rosa-forte: #d7659d;
+      --rosa-escuro: #9b3d6b;
+      --texto: #5b334b;
+      --branco: #ffffff;
+      --sombra: 0 20px 50px rgba(207, 92, 143, 0.18);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", sans-serif;
+      color: var(--texto);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(244, 169, 203, 0.45), transparent 34%),
+        linear-gradient(180deg, #fffafd 0%, #fdeaf3 100%);
+      overflow-x: hidden;
+    }
+
+    .decoracao {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .decoracao span {
+      position: absolute;
+      color: rgba(209, 98, 150, 0.28);
+      font-size: 24px;
+      animation: flutuar 7s ease-in-out infinite;
+    }
+
+    .decoracao span:nth-child(1) { top: 8%; left: 8%; }
+    .decoracao span:nth-child(2) { top: 18%; right: 9%; animation-delay: 1s; }
+    .decoracao span:nth-child(3) { top: 58%; left: 5%; animation-delay: 2s; }
+    .decoracao span:nth-child(4) { bottom: 10%; right: 8%; animation-delay: 3s; }
+    .decoracao span:nth-child(5) { bottom: 25%; left: 13%; animation-delay: 4s; }
+
+    @keyframes flutuar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    .page {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .site {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      position: relative;
+      height: 430px;
+      overflow: hidden;
+      background: var(--rosa-fundo);
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -5%;
+      right: -5%;
+      bottom: -38px;
+      height: 95px;
+      background: var(--rosa-claro);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--rosa-escuro);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(207, 92, 143, 0.14);
+    }
+
+    .disco {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 30%, #fff, #ffd9e9 20%, #e78ab5 60%, #cf5c8f 100%);
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 12px 28px rgba(207, 92, 143, 0.22);
+    }
+
+    .content {
+      background: var(--rosa-claro);
+      padding: 0 22px 34px;
+    }
+
+    .card {
+      position: relative;
+      z-index: 3;
+      margin-top: -8px;
+      background: linear-gradient(180deg, #ffffff, #fff8fc);
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 34px;
+      padding: 30px 22px;
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+
+    .mini-bow {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 8vw, 72px);
+      line-height: 1;
+      color: var(--rosa-escuro);
+      margin-bottom: 6px;
+    }
+
+    h1 span {
+      font-family: "Great Vibes", cursive;
+      font-weight: 400;
+      color: var(--rosa-forte);
+      font-size: 1.15em;
+    }
+
+    .sub {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(28px, 6vw, 46px);
+      color: var(--rosa-forte);
+      margin-bottom: 20px;
+    }
+
+    .mensagem {
+      background: #fff;
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 26px;
+      padding: 22px 18px;
+      box-shadow: 0 10px 26px rgba(207, 92, 143, 0.1);
+      margin-bottom: 26px;
+    }
+
+    .mensagem p {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .mensagem p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mensagem strong {
+      color: var(--rosa-escuro);
+    }
+
+    .titulo-secao {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--rosa-escuro);
+      margin-bottom: 16px;
+    }
+
+    .detalhes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .detalhe {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(237, 164, 198, 0.45);
+      border-radius: 22px;
+      padding: 18px 10px;
+      box-shadow: 0 8px 20px rgba(207, 92, 143, 0.08);
+    }
+
+    .detalhe .icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .detalhe h3 {
+      font-size: 12px;
+      color: var(--rosa-forte);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .detalhe p {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--texto);
+      line-height: 1.4;
+    }
+
+    .form-box {
+      background: linear-gradient(180deg, #fffafd, #ffffff);
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 30px;
+      padding: 24px 18px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 26px rgba(207, 92, 143, 0.1);
+      text-align: left;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      color: var(--rosa-escuro);
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    .form-box .desc {
+      text-align: center;
+      color: #8d5c78;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .campo.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--rosa-escuro);
+      margin-left: 4px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(237, 164, 198, 0.7);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 14px;
+      font-family: "Poppins", sans-serif;
+      font-size: 15px;
+      outline: none;
+      color: var(--texto);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--rosa-forte);
+      box-shadow: 0 0 0 4px rgba(215, 101, 157, 0.14);
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .radios {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .radio input {
+      display: none;
+    }
+
+    .radio span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 12px;
+      border-radius: 17px;
+      border: 1px solid rgba(237, 164, 198, 0.7);
+      background: #fff;
+      color: var(--rosa-escuro);
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .radio input:checked + span {
+      background: linear-gradient(135deg, #eda4c6, #d7659d);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 10px 24px rgba(207, 92, 143, 0.25);
+    }
+
+    .btn {
+      grid-column: 1 / -1;
+      border: none;
+      margin-top: 8px;
+      border-radius: 18px;
+      padding: 17px;
+      background: linear-gradient(135deg, #eda4c6, #d7659d);
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(207, 92, 143, 0.26);
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .resposta {
+      display: none;
+      margin-top: 18px;
+      text-align: center;
+      background: #fff4fa;
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 20px;
+      padding: 16px;
+      line-height: 1.6;
+      color: var(--texto);
+    }
+
+    .resposta a {
+      display: inline-block;
+      margin-top: 12px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 13px 18px;
+      border-radius: 15px;
+      box-shadow: 0 10px 22px rgba(37, 211, 102, 0.2);
+    }
+
+    .collage {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 22px;
+      align-items: center;
+      background: linear-gradient(180deg, #fff, #fff4fa);
+      border: 1px solid rgba(237, 164, 198, 0.5);
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: 0 10px 26px rgba(207, 92, 143, 0.08);
+    }
+
+    .foto-crianca {
+      position: relative;
+      min-height: 280px;
+      display: grid;
+      place-items: end center;
+    }
+
+    .foto-crianca img {
+      width: 100%;
+      max-width: 250px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 24px rgba(154, 62, 107, 0.2));
+    }
+
+    .nota {
+      text-align: left;
+    }
+
+    .papel {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid rgba(237, 164, 198, 0.45);
+      border-radius: 22px;
+      padding: 20px;
+      margin-bottom: 14px;
+      transform: rotate(-2deg);
+      box-shadow: 0 10px 22px rgba(207, 92, 143, 0.1);
+    }
+
+    .papel h3 {
+      font-family: "Great Vibes", cursive;
+      font-size: 40px;
+      color: var(--rosa-forte);
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .papel p,
+    .nota-final p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .nota-final {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(237, 164, 198, 0.45);
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .assinatura {
+      font-family: "Great Vibes", cursive;
+      color: var(--rosa-forte);
+      font-size: 42px;
+      margin-top: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
+      color: #95647c;
+    }
+
+    @media (max-width: 800px) {
+      .detalhes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .collage {
+        grid-template-columns: 1fr;
+      }
+
+      .nota {
+        text-align: center;
+      }
+
+      .papel {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 10px;
+      }
+
+      .site {
+        border-radius: 28px;
+      }
+
+      .hero {
+        height: 330px;
+      }
+
+      .content {
+        padding: 0 12px 24px;
+      }
+
+      .card {
+        border-radius: 26px;
+        padding: 24px 14px;
+      }
+
+      .mensagem p {
+        font-size: 15px;
+      }
+
+      .detalhes {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .detalhe {
+        padding: 15px 8px;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .radios {
+        grid-template-columns: 1fr;
+      }
+
+      .tag {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      .disco {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="decoracao">
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+    <span>♡</span>
+  </div>
+
+  <main class="page">
+    <section class="site">
+
+      <header class="hero">
+        <div class="tag">🎀 Convite especial</div>
+        <div class="disco">✨</div>
+
+        <img src="foto-principal.jpg" alt="Foto principal da KaKa">
+      </header>
+
+      <section class="content">
+        <div class="card">
+
+          <div class="mini-bow">🎀</div>
+
+          <h1>19 anos da <span>KaKa</span></h1>
+          <div class="sub">Confirme sua presença</div>
+
+          <div class="mensagem">
+            <p><strong>Oii! 💖</strong></p>
+
+            <p>
+              Dia <strong>13/06</strong>, às <strong>19h</strong>, vou comemorar meus
+              <strong>19 anos</strong> no <strong>Boi na Brasa</strong> e queria muito sua presença! ✨
+            </p>
+
+            <p>
+              Teremos um rodízio incrível por <strong>R$109,90</strong> com massas,
+              sushi, pizzas, sobremesas e <strong>19 cortes de carnes</strong> 🥩🍣🍕
+            </p>
+
+            <p><strong>Espero você! 💕</strong></p>
+          </div>
+
+          <h2 class="titulo-secao">Detalhes da Festa</h2>
+
+          <div class="detalhes">
+            <div class="detalhe">
+              <div class="icon">📅</div>
+              <h3>Data</h3>
+              <p>13 de junho</p>
+            </div>
+
+            <div class="detalhe">
+              <div class="icon">🕖</div>
+              <h3>Horário</h3>
+              <p>19:00</p>
+            </div>
+
+            <div class="detalhe">
+              <div class="icon">📍</div>
+              <h3>Local</h3>
+              <p>Boi na Brasa BH</p>
+            </div>
+
+            <div class="detalhe">
+              <div class="icon">🍽️</div>
+              <h3>Rodízio</h3>
+              <p>R$109,90</p>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <h2>Confirmar presença</h2>
+            <p class="desc">Preencha rapidinho para confirmar no WhatsApp 💗</p>
+
+            <form id="formConfirmacao">
+              <div class="campo">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+              </div>
+
+              <div class="campo">
+                <label for="telefone">Seu telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+              </div>
+
+              <div class="campo full">
+                <label>Você vai?</label>
+
+                <div class="radios">
+                  <label class="radio">
+                    <input type="radio" name="presenca" value="Sim, eu vou!" required>
+                    <span>Sim, eu vou 💖</span>
+                  </label>
+
+                  <label class="radio">
+                    <input type="radio" name="presenca" value="Não vou conseguir ir">
+                    <span>Não vou 😢</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="quantidade">Quantidade de pessoas</label>
+                <select id="quantidade" required>
+                  <option value="">Selecione</option>
+                  <option value="1 pessoa">1 pessoa</option>
+                  <option value="2 pessoas">2 pessoas</option>
+                  <option value="3 pessoas">3 pessoas</option>
+                  <option value="4 pessoas">4 pessoas</option>
+                  <option value="5 ou mais pessoas">5 ou mais pessoas</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="pagamento">Forma de pagamento</label>
+                <select id="pagamento">
+                  <option value="">Selecione</option>
+                  <option value="Pix">Pix</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                  <option value="Cartão">Cartão</option>
+                  <option value="Não sei ainda">Não sei ainda</option>
+                </select>
+              </div>
+
+              <div class="campo full">
+                <label for="mensagem">Mensagem para a KaKa</label>
+                <textarea id="mensagem" placeholder="Escreva uma mensagem opcional 💕"></textarea>
+              </div>
+
+              <button class="btn" type="submit">💌 Confirmar presença</button>
+            </form>
+
+            <div class="resposta" id="resposta"></div>
+          </div>
+
+          <section class="collage">
+            <div class="foto-crianca">
+              <img src="foto-crianca.png" alt="Foto da KaKa criança">
+            </div>
+
+            <div class="nota">
+              <div class="papel">
+                <h3>Vai ser inesquecível!</h3>
+                <p>Estou te esperando para comemorar esse momento comigo 💕</p>
+              </div>
+
+              <div class="nota-final">
+                <p>
+                  Conto com você para celebrar esse novo ciclo comigo!
+                  Vai ser uma noite especial, cheia de comida boa, risadas e lembranças lindas. ✨
+                </p>
+
+                <div class="assinatura">KaKa 💗</div>
+              </div>
+            </div>
+          </section>
+
+          <div class="footer">
+            Feito com carinho para os 19 anos da KaKa 🎀
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById("formConfirmacao");
+    const resposta = document.getElementById("resposta");
+
+    /*
+      TROQUE PELO NÚMERO QUE VAI RECEBER AS CONFIRMAÇÕES.
+
+      Exemplo:
+      Brasil + DDD + número
+      55 + 31 + 999999999
+
+      Ficaria:
+      const numeroWhatsApp = "5531999999999";
+    */
+
+    const numeroWhatsApp = "5531999999999";
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const presenca = document.querySelector('input[name="presenca"]:checked').value;
+      const quantidade = document.getElementById("quantidade").value;
+      const pagamento = document.getElementById("pagamento").value;
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto = 
+`🎀 Confirmação de presença - 19 anos da KaKa
+
+Nome: ${nome}
+Telefone: ${telefone || "Não informado"}
+Presença: ${presenca}
+Quantidade: ${quantidade}
+Pagamento: ${pagamento || "Não informado"}
+Mensagem: ${mensagem || "Sem mensagem"}
+
+💖 Evento: 13/06 às 19h
+📍 Local: Boi na Brasa BH
+🍽️ Rodízio: R$109,90`;
+
+      const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+      resposta.style.display = "block";
+      resposta.innerHTML = `
+        Obrigada, <strong>${nome}</strong>! 💖<br>
+        Sua confirmação está pronta.<br>
+        Agora clique no botão abaixo para enviar pelo WhatsApp:
+        <br>
+        <a href="${linkWhatsApp}" target="_blank">Enviar no WhatsApp</a>
+      `;
+    });
+  </script>
+
+</body>
+</html>
